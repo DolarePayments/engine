@@ -163,6 +163,10 @@ img {
     background-repeat: no-repeat;
 }
 
+#main-content {
+    background: #0a203b;
+}
+
 #latest-games {
     background-image: url('images/carousel-bg.png');
     background-size: cover;
@@ -263,6 +267,11 @@ img {
     padding: 15px;
 }
 
+body.games .col-left {
+    padding: 0;
+    width: 570px;
+}
+
 #tabs ul {
     padding: 0;
     margin: 0 0 10px 0;
@@ -330,6 +339,33 @@ img {
     float: right;
     width: 580px;
     padding: 15px;
+}
+
+body.games .col-right {
+    padding: 0;
+    width: 570px;
+}
+
+.submit-block {
+    margin: 35px 0;
+}
+
+.submit-header {
+    background: #f26522;
+    padding: 13px;
+    text-transform: uppercase;
+    font-size: 9px;
+}
+
+.submit-content {
+    padding: 15px;
+    background-color: #031120;
+}
+
+.submit-content img {
+    display: block;
+    margin: auto;
+    width: 70%;
 }
 
 #main-footer {
