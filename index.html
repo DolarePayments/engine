@@ -13,11 +13,31 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <!-- jquery lib file -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  <!-- carousel -->
+  <script src="js/carousel.js"></script>
+  <script>
+   $(function() {
+     $('.carousel').tinycarousel();
+   });
+ </script>
+
+ <!-- UI tabs -->
+ <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ <script>
+  $(function() {
+   $( "#tabs" ).tabs();
+  });
+ </script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
-
   <div id="wrapper">
     <header id="main-header">
       <div class="htop">
@@ -35,7 +55,7 @@
               <li><a href="#">Install Engine</a></li>
               <li><a href="#">My Account</a></li>
               <li><a href="#">Register</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a class="active" href="#">Login</a></li>
             </ul>
           </nav>
           <!-- #main-menu -->
@@ -48,7 +68,7 @@
         <div class="inner">
           <nav id="secondary-menu" class="menu">
             <ul>
-              <li><a href="#">Games</a></li>
+              <li><a class="active" href="#">Games</a></li>
               <li><a href="#">Community</a></li>
               <li><a href="#">Studios</a></li>
             </ul>
@@ -57,7 +77,7 @@
 
           <div id="search-form">
             <form method="get">
-              <input type="search" class="search-input" placeholder="Search here...">
+              <label><input type="search" class="search-input" placeholder="Search here..."> <i class="fa fa-search"></i></label>
             </form>
           </div>
           <!-- #search-form -->
@@ -69,25 +89,29 @@
     <!-- #main-header -->
 
     <div id="slideshow">
-      <img src="images/slide-one.png" alt="Slide One">
+
     </div>
     <!-- #slideshow -->
 
     <div id="main-content">
       <div id="latest-games">
         <div class="inner">
-          <div class="carousel">
-            <div class="overview">
-              <ul>
-                <li><img src="game.png" alt="Game"></li>
-                <li><img src="game.png" alt="Game"></li>
-                <li><img src="game.png" alt="Game"></li>
-                <li><img src="game.png" alt="Game"></li>
-              </ul>
+            <h1>Latest Games</h1>
+            <div class="carousel">
+              <a class="buttons previous" href="#">&gt;</a>
+              <div class="viewport">
+                 <ul class="overview">
+                   <li><a href="#"><img src="images/gallery/1.png"></a></li>
+                   <li><a href="#"><img src="images/gallery/1.png"></a></li>
+                   <li><a href="#"><img src="images/gallery/1.png"></a></li>
+                   <li><a href="#"><img src="images/gallery/1.png"></a></li>
+                 </ul>
+                 <!-- .overview -->
+               </div>
+               <!-- .viewport -->
+               <a class="buttons next" href="#">&gt;</a>
             </div>
-            <!-- .overview -->
-          </div>
-          <!-- .carousel -->
+            <!-- .carousel -->
         </div>
         <!-- .inner -->
       </div>
@@ -97,41 +121,106 @@
         <div class="inner">
           <div class="col-left">
             <div id="tabs">
-              <ul class="ui-tabs">
+              <ul>
                 <li><a href="#upcoming">Upcoming</a></li>
                 <li><a href="#most-popular">Most Popular</a></li>
                 <li><a href="#new">New</a></li>
               </ul>
-              <!-- .ui-tabs -->
 
-              <div class="tab-panel">
+              <div id="upcoming">
                 <div class="game-block">
                   <figure>
-                    <img src="images/game.png" alt="Game">
+                    <img src="images/game-thumb.png" alt="Pic">
                   </figure>
+                  <h1>Title goes here</h1>
+                  <h2>Subtitle goes here</h2>
 
-                  <h1 class="game-title">Game Title</h1>
-
-                  <p>Date</p>
-
-                  <footer class="game-footer">
+                  <footer>
                     <div class="platforms">
-                      <img src="images/playstation.png" alt="Playstation">
+                      <img src="images/xbox.png" alt="Playstation">
                     </div>
                     <!-- .platforms -->
 
-                    <div class="buy">
-                      <button class="btn" href="#">Buy Now</button>
+                    <div class="buy-now">
+                      <button class="btn">Buy Now</button>
                     </div>
-                    <!-- .buy -->
+                    <!-- .buy-now -->
                   </footer>
-                  <!-- .game-footer -->
                 </div>
                 <!-- .game-block -->
 
-                <a href="#">All Games</a>
+                <div class="game-block">
+                  <figure>
+                    <img src="images/game-thumb.png" alt="Pic">
+                  </figure>
+                  <h1>Title goes here</h1>
+                  <h2>Subtitle goes here</h2>
+
+                  <footer>
+                    <div class="platforms">
+                      <img src="images/xbox.png" alt="Playstation">
+                    </div>
+                    <!-- .platforms -->
+
+                    <div class="buy-now">
+                      <button class="btn">Buy Now</button>
+                    </div>
+                    <!-- .buy-now -->
+                  </footer>
+                </div>
+                <!-- .game-block -->
+
+                <div class="game-block">
+                  <figure>
+                    <img src="images/game-thumb.png" alt="Pic">
+                  </figure>
+                  <h1>Title goes here</h1>
+                  <h2>Subtitle goes here</h2>
+
+                  <footer>
+                    <div class="platforms">
+                      <img src="images/xbox.png" alt="Playstation">
+                    </div>
+                    <!-- .platforms -->
+
+                    <div class="buy-now">
+                      <button class="btn">Buy Now</button>
+                    </div>
+                    <!-- .buy-now -->
+                  </footer>
+                </div>
+                <!-- .game-block -->
+
+                <div class="game-block">
+                  <figure>
+                    <img src="images/game-thumb.png" alt="Pic">
+                  </figure>
+                  <h1>Title goes here</h1>
+                  <h2>Subtitle goes here</h2>
+
+                  <footer>
+                    <div class="platforms">
+                      <img src="images/xbox.png" alt="Playstation">
+                    </div>
+                    <!-- .platforms -->
+
+                    <div class="buy-now">
+                      <button class="btn">Buy Now</button>
+                    </div>
+                    <!-- .buy-now -->
+                  </footer>
+                </div>
+                <!-- .game-block -->
               </div>
-              <!-- .tab-panel -->
+              <!-- #upcoming -->
+
+              <div id="most-popular">
+              </div>
+              <!-- #most-popular -->
+
+              <div id="new">
+              </div>
+              <!-- #new -->
             </div>
             <!-- #tabs -->
           </div>
@@ -139,14 +228,14 @@
 
           <div class="col-right">
             <div class="expanded-game">
-              <img src="images/expanded-game.png" alt="Expanded Game">
+              <img src="images/game-photo.png" alt="Expanded Game">
 
-              <p>Lorem ipsum</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!-- .expanded-game -->
 
             <div id="mini-slideshow">
-              <img src="images/mini-slideshow.png" alt="Slide">
+              <img src="images/game-photo.png" alt="Slide">
             </div>
             <!-- #mini-slideshow -->
           </div>
@@ -172,10 +261,10 @@
         <!-- #footer-menu -->
 
         <div id="social-media">
-          <a href="#" target="_blank"><img src="images/socia/facebook.png" alt="Facebook"></a>
-          <a href="#" target="_blank"><img src="images/socia/youtube.png" alt="YouTube"></a>
-          <a href="#" target="_blank"><img src="images/socia/twitter.png" alt="Twitter"></a>
-          <a href="#" target="_blank"><img src="images/socia/rss.png" alt="RSS"></a>
+          <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+          <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="#" target="_blank"><img src="images/rss.png" alt="RSS"></a>
         </div>
         <!-- #social-media -->
 
